@@ -41,37 +41,37 @@ typeof dateFirstLogin;
 
 // Null - nie posiada (jedna wartość)
 // Najczęściej przez programistę nadawana
-// let userSecondName = null;
-// typeof null; // błędnie zwraca jako "object", ale to nie jest obiekt
+let userSecondName = null;
+typeof null; // błędnie zwraca jako "object", ale to nie jest obiekt
 
 // Symbol (nowy typ w ES6)
 //do stworzenie wymaga wywołania funkcji. Nie będzie omawiany w kursie.
-// typeof Symbol();
+typeof Symbol();
 
 // Typ referencyjny - Obiekty
-// typeof {};
-// typeof [];
-// typeof function () { };
+typeof {};
+typeof [];
+typeof function () { };
 
 
 // Przypisanie wartości i przypisanie referencji do obiektu
-// let primitiveType1 = 20;
-// let primitiveType2 = primitiveType1; //Tworzona jest kopia, wartość identyczna, ale nie ta sama (jest to idealna kopi wartość, ale stanowiaca już osobną wartość)
+let primitiveType1 = 20;
+let primitiveType2 = primitiveType1; //Tworzona jest kopia, wartość identyczna, ale nie ta sama (jest to idealna kopi wartość, ale stanowiaca już osobną wartość)
 
 //W wyniku tych dwóch instrukcji powyżej powstają dwie zmienne które mają warrości 20. Są to dwie wartości 20 (a nie jedna ta sama przypisana do obu zmiennych)
 
-// primitiveType1 = 30;
+primitiveType1 = 30;
 // console.log(primitiveType2);
 // Ponieważ wartość została skopiowana i obie zmienne mają rózne wartości, to przypsiania nowej wartośic do zmiennej primitiveType1 nie wpływa na zmienną primitiveType2. Nie ma miezy nimi żadnego połączenia (wcześniej zostałą tylko skopiowana wartość - tylko tyle)
 
 
-// const referenceValue1 = [1, 2, 3];
-// const referenceValue2 = referenceValue1;
+const referenceValue1 = [1, 2, 3];
+const referenceValue2 = referenceValue1;
 //Tylko jeden obiekt istnieje. Nie ma tu kopii obiektu jak przy typach prostych. Tu kopiujemy tylko referencje (dloatego typ referencyjny) do miesjca w pamięci (adres). Obie zmienne nie przechowują tego obiektu tylko jakby link do niego.
 
 // Praca z tym samym obiektem na obu zmiennych. Nie ma znaczenie na której coś zmieniamy, bo obie prowadzą do tego samego. Nie tworzymy tu nowego obiektu tylko dokonujemy zmian w jednym już utworzonym (przy deklaracji referenceValue1) 
-// referenceValue1[3] = 4;
-// referenceValue2[4] = 10;
+referenceValue1[3] = 4;
+referenceValue2[4] = 10;
 
 // console.log(referenceValue2);
 //Obiekt nie została skopiowany, a został przypisany jedynie link do miejsca w pamięci, w którym się znajduje. 
